@@ -18,6 +18,7 @@ function reducer(state, action) {
         seats: action.seats,
         numOfRows: action.numOfRows,
         seatsPerRow: action.seatsPerRow,
+        bookedSeats: action.bookedSeats,
       };
     }
     default:
