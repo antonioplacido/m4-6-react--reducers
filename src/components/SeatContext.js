@@ -11,7 +11,7 @@ const initialState = {
 
 function reducer(state, action) {
   switch (action.type) {
-    case "recieve-seat-info-from-server": {
+    case "receive-seat-info-from-server": {
       return {
         ...state,
         hasLoaded: true,
@@ -30,7 +30,7 @@ export const SeatProvider = ({ children }) => {
 
   const receiveSeatInfoFromServer = (data) => {
     dispatch({
-      type: "recieve-seat-info-from-server",
+      type: "receive-seat-info-from-server",
       ...data,
     });
   };

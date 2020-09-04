@@ -1,6 +1,7 @@
 import React from "react";
 import { SeatContext } from "./SeatContext";
 import GlobalStyles from "./GlobalStyles";
+import TicketWidget from "./TicketWidget";
 
 function App() {
   const {
@@ -9,7 +10,7 @@ function App() {
   } = React.useContext(SeatContext);
 
   React.useEffect(() => {
-    fetch("/api/seat-availibility")
+    fetch("/api/seat-availability")
       .then((res) => res.json())
       .then((data) => receiveSeatInfoFromServer(data));
   }, []);
@@ -19,6 +20,7 @@ function App() {
       <GlobalStyles />
       {/* TODO: write code  */}
       This venue has {numOfRows} rows!
+      <TicketWidget />
     </>
   );
 }
